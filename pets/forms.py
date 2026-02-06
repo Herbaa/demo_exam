@@ -26,7 +26,7 @@ class PetForm(forms.ModelForm):
             'type_of_pet': forms.Select(),
             'breed': forms.Select(),
             'weight': forms.NumberInput(),
-            'birth_date': forms.DateField(),
+            'birth_date': forms.DateInput(attrs={'type': 'date'}),
             'owner': forms.Select()
         }
         
@@ -35,12 +35,11 @@ class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = [
-            'user', 'order_date', 'total_amount'
+            'user', 'total_amount'
         ]
         widgets = {
             'user': forms.Select(),
-            'order_date': forms.DateField(),
-            
+            'total_amount': forms.NumberInput(),
         }
         
 class OrderServiceForm(forms.ModelForm):

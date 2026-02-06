@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ViheclsConfig(AppConfig):
+class PetsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'vihecls'
+    name = 'pets'

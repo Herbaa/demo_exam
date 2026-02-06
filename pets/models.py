@@ -9,7 +9,7 @@ from django.contrib.auth.models import AbstractUser
 #     role = models.CharField(max_length=255)
     
 class User(AbstractUser):
-    role = models.CharField(max_length=55)    
+    role = models.CharField(max_length=55, blank=True)    
 
 class TypeOfPet(models.Model): 
     name = models.CharField(max_length=255, unique=True)
@@ -45,6 +45,6 @@ class OrderService(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
 
 class ServiceTypeOfPet(models.Model):
-    service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='Services_type_of_pet')
-    type_of_pet = models.ForeignKey(TypeOfPet, on_delete=models.CASCADE, related_name='Services_type_of_pet') 
+    service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='services_type_of_pet')
+    type_of_pet = models.ForeignKey(TypeOfPet, on_delete=models.CASCADE, related_name='services_type_of_pet') 
     

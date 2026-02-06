@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<style>
+
+</style>
+<body>
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="{{service.name.id_for_label}}"> {{service.name.label}}</label>
+        {{service.name}}
+
+        <label for="{{service.description.id_for_label}}"> {{service.description.label}}</label>
+        {{service.description}}
+
+        <label for="{{service.price.id_for_label}}"> {{service.price.label}}</label>
+        {{service.price}}
+
+        <label for="{{service.discount.id_for_label}}"> {{service.discount.label}}</label>
+        {{service.discount}}
+
+        <button type="submit">create</button>
+    </form>
+</body>
+
+</html>
