@@ -1,34 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head></head>
-<style>
-    body {
-        background-color: #4c5866;
-        padding: 20px;
-    }
-
-    .cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .card {
-        background-color: white;
-        border-radius: 8px;
-        padding: 15px;
-    }
-
-    .card h3 {
-        margin: 0 0 10px;
-    }
-
-    .card p {
-        margin: 4px 0;
-        color: #333;
-    }
-</style>
-<body>
+{% extends 'base.html' %}
+{% block content %}
     <h1>Список питомцев</h1>
     <div class="cards">
         {%for pet in pets%}
@@ -39,7 +10,4 @@
         <p>пусто</p>
         {% endfor %}
     </div>
-    
-</body>
-
-</html>
+{% endblock %}

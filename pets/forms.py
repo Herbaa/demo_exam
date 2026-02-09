@@ -8,10 +8,10 @@ class ServiceForm(forms.ModelForm):
             'name', 'description', 'price', 'discount'
         ]
         widgets = {
-            'name': forms.TextInput(),
-            'description': forms.Textarea(),
-            'price': forms.NumberInput(),
-            'discount': forms.NumberInput()
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'description': forms.Textarea(attrs={'class': 'form-control'}),
+            'price': forms.NumberInput(attrs={'class': 'form-control'}),
+            'discount': forms.NumberInput(attrs={'class': 'form-control'})
         }
         
         
